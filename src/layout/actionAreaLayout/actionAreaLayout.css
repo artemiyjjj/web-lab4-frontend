@@ -1,0 +1,9 @@
+.action-area {
+    background-color: #303E68;
+    grid-area: main;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 10px 10px;
+}
+

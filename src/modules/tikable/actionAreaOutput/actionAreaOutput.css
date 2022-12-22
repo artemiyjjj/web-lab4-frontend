@@ -1,0 +1,6 @@
+.action-area__output {
+    grid-area: graphic;
+    background: white;
+    grid-column: 1 / 6;
+    grid-row: 1 / 4;
+}

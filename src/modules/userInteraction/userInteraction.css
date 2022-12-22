@@ -1,0 +1,46 @@
+.action-area__input {
+    background: #95a7d0;
+    grid-area: input;
+    grid-column: 1 / 6;
+    grid-row: 4 / 6;
+    height: fit-content;
+    padding: 25px;
+}
+
+.action-area__input__form {
+    display: grid;
+    gap: 30px 15px;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-flow: column;
+    place-items: center;
+}
+
+.action-area__input__form__xInput,
+.action-area__input__form__yInput,
+.action-area__input__form__rInput,
+.action-area__input__form__send-button {
+    place-self: start;
+}
+
+.action-area__input__form__xInput_field,
+.action-area__input__form__yInput_field,
+.action-area__input__form__rInput_field {
+    justify-self:end;
+}
+
+.action-area__input__form__yInput_field {
+
+}
+
+.action-area__input__form__yInput_button {
+    border-radius: 2px;
+    border: 1px solid #303E68;
+    background: #69a3b2;
+    box-shadow: 0 5px #666;
+}
+
+.action-area__input__form__yInput_selected-button {
+    background-color: #6784DD;
+    border: 1px solid blue;
+}

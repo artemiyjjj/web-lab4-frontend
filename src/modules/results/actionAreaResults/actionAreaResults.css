@@ -1,0 +1,27 @@
+.action-area__results {
+    background: #95a7d0;
+    grid-area: results;
+    width: 100%;
+    height: 700px;
+    overflow: hidden auto;
+    grid-column: 6 / 9;
+    grid-row: 1 / 6;
+}
+
+.action-area__results__history-table {
+    width: 100%;
+    overflow: scroll;
+    box-sizing: content-box;
+}
+
+.action-area__results__history-table_body {
+    overflow-y: auto;
+}
+
+.action-area__results__history-table__table-header > *,
+.action-area__results__history-table__table-element > * {
+    text-align: center;
+    padding: 5px 10px;
+    word-break: keep-all;
+    background: #6784DD;
+}
