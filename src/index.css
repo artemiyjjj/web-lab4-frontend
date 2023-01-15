@@ -1,7 +1,7 @@
 @import "styles/basic.css";
 @import "styles/wrapper.css";
-@import "components/header/header.css";
-@import "layout/actionAreaLayout/actionAreaLayout.css";
+@import "layout/components/header/header.css";
+@import "layout/commonLayout.css";
 @import "modules/userInteraction/userInteraction.css";
 @import "modules/results/actionAreaResults/actionAreaResults.css";
 @import "modules/tikable/actionAreaOutput/actionAreaOutput.css";

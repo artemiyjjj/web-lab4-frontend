@@ -2,9 +2,7 @@
     width: 90%;
     height: 100%;
     margin: auto auto;
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-top: 15px;
+    padding-top: 10px;
     padding-bottom: 15px;
     display: grid;
     grid-template:

@@ -4,12 +4,9 @@ import Axis from "./axis/Axis.jsx";
 
 const ActionAreaOutput = () => {
 
-    const r = useSelector(state => state.inputFormSlice.r);
-    const ref = useRef();
-
     return (
         <div className="action-area__output">
-            <Axis scaling={r} ref={ref}/>
+            <Axis />
             {/*<AxisNew scaling={r}/>*/}
         </div>
     )

@@ -1,0 +1,11 @@
+.not-found-link {
+    color: #F6B062;
+}
+
+.not-found-link:visited {
+    color: #69a3b2;
+}
+
+.not-found-link:hover {
+    color: aqua;
+}

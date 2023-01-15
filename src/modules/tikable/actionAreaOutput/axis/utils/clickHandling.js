@@ -1,5 +1,5 @@
 export function handleClick({event, r, width, height, offset, numX, numY}) {
-    const {svgX,svgY} = calcSvgCoordinates(event);
+    const {svgX, svgY} = calcSvgCoordinates(event);
     const {x, y} = calcFormCoordinates(r, svgX, svgY, width, height, offset, numX, numY);
 
     return {x, y, r};
@@ -25,8 +25,16 @@ function calcFormCoordinates(r, svgX, svgY, width, height, offset, numX, numY) {
     const xPx = svgX - halfWidthPx;
     const yPx = halfHeightPx - svgY;
 
-    const x =  xPx / singlePeriodForXPx * r / 2;
-    const y = yPx / singlePeriodForYPx * r / 2;
+    let x = xPx / singlePeriodForXPx * r / 2;
+    let y = yPx / singlePeriodForYPx * r / 2;
 
-    return {x, y};
+    x = Math.round(x * 1000) / 1000;
+    y = Math.round(y * 1000) / 1000;
+
+    console.log(x.toString() + "  " + y.toString());
+
+    return {
+        x: x.toString(),
+        y: y.toString()
+    };
 }

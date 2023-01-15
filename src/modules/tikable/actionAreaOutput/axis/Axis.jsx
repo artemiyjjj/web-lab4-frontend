@@ -1,13 +1,15 @@
 import React, {useEffect, useRef} from "react";
 import * as d3 from "d3";
+import {useSelector} from "react-redux";
 import {useMakeShotMutation} from "../../../../store/slices/api/controllerServlet/controllerServletApi.js";
 import d3Consts from "./const/consts.js";
 import {handleClick} from "./utils/clickHandling.js";
 
-const Axis = (props) => {
+const Axis = () => {
     const [makeShot] = useMakeShotMutation();
+
     const d3Axis = useRef();
-    const r = props.scaling;
+    const r = useSelector(state => state.inputFormSlice.r);
 
     useEffect(() => {
             updateAxis()
