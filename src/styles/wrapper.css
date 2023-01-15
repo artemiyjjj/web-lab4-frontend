@@ -1,13 +1,15 @@
 .wrapper {
-    width: calc(100% - 30px);
+    width: 90%;
     height: 100%;
     margin: auto auto;
     padding-left: 15px;
     padding-right: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     display: grid;
     grid-template:
         [row1-start] "header" 1fr [row1-end]
-        [row2-starrt] "main" 11fr [row2-end]
+        [row2-starrt] "main" 10fr [row2-end]
         / 1fr;
     gap: 10px 15px;
 }

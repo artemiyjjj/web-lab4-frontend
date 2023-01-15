@@ -1,0 +1,49 @@
+{
+  "tableData": [
+    {
+      "id": 1,
+      "coordinates": {
+        "x": 2,
+        "y": 2,
+        "r": 2
+      },
+      "exec_time": 100,
+      "curr_time": 16972812317357,
+      "isHit": false
+    },
+    {
+      "id": 2,
+      "coordinates": {
+        "x": -2,
+        "y": 2,
+        "r": 1
+      },
+      "exec_time": 102,
+      "curr_time": 16972812317359,
+      "isHit": false
+    },
+    {
+      "id": 3,
+      "coordinates": {
+        "x": 1,
+        "y": 1,
+        "r": 2
+      },
+      "exec_time": 188,
+      "curr_time": 16972812317361,
+      "isHit": true
+    },
+    {
+      "x": "1",
+      "y": "-1.5",
+      "r": "1",
+      "id": 4
+    },
+    {
+      "x": "1",
+      "y": "-1",
+      "r": "1",
+      "id": 5
+    }
+  ]
+}

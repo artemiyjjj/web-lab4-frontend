@@ -5,6 +5,7 @@
     grid-row: 4 / 6;
     height: fit-content;
     padding: 25px;
+    border-radius: 10px;
 }
 
 .action-area__input__form {

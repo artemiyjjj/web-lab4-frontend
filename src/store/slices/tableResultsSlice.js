@@ -11,11 +11,13 @@ export const tableResultsSlice = createSlice({
         builder.addMatcher(
             controllerServletApi.endpoints.makeShot.matchFulfilled,
             (state, action) => {
-                console.log(action.payload);
                 state.shots.push(action.payload);
-                console.log(state.shots);
-
             }
-        );
+        )
+            // .addMatcher(
+            //     controllerServletApi.endpoints.getTableData.matchFulfilled,
+            //     (state, action) => {
+            //         action.payload.forEach((shot) => state.shots.push(shot));
+            //     });
     },
 });

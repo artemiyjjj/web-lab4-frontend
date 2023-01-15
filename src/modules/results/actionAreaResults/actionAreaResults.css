@@ -18,10 +18,10 @@
     overflow-y: auto;
 }
 
-.action-area__results__history-table__table-header > *,
-.action-area__results__history-table__table-element > * {
+.action-area__results__history-table__table-header > th,
+.action-area__results__history-table__table-element > td {
     text-align: center;
-    padding: 5px 10px;
+    padding: 10px 5px 10px 5px;
     word-break: keep-all;
     background: #6784DD;
 }

@@ -1,4 +1,3 @@
-
 import {createApi} from "@reduxjs/toolkit/dist/query/react/index.js";
 import {baseQuery} from "../configureApi.js";
 
@@ -9,25 +8,29 @@ export const controllerServletApi = createApi({
     baseQuery,
     tagTypes: tagTypes,
     endpoints: (builder) => ({
-        getTableData: builder.query({
-            query: () => "",
-            providesTags: ["Table"]
-        }),
+        // getTableData: builder.query({
+        //     query: () => "",
+        //     providesTags: (result) => result
+        //         ? [
+        //             ...result.map(({id}) => ({type: "Table", id: "LIST"})),
+        //             {type: "Table", id: "LIST"},
+        //         ] :
+        //         [{type: "Table", id: "LIST"}],
+        // }),
         makeShot: builder.mutation({
             query: ({x, y, r}) => ({
                 url: "",
                 method: "POST",
-                body:{x,y,r},
-                invalidatesTags: ["Table"]
+                body: {x, y, r},
+                // invalidatesTags: {type: "Table", id: "LIST"}
             })
         })
     })
 
 })
 
-// export default controllerServletApi;
 export const {
-    useGetTableDataQuery,
+    // useGetTableDataQuery,
     useMakeShotMutation
 } = controllerServletApi
 

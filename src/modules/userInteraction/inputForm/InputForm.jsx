@@ -9,7 +9,7 @@ import ActionButton from "./components/ActionButton.jsx";
 import {useMakeShotMutation} from "../../../store/slices/api/controllerServlet/controllerServletApi.js";
 
 const InputForm = () => {
-    const x = useSelector((state) => state.inputFormSlice.x);
+    const x = useSelector(state => state.inputFormSlice.x);
     const y = useSelector(state => state.inputFormSlice.y);
     const r = useSelector(state => state.inputFormSlice.r);
 

@@ -3,7 +3,7 @@ import {createSlice} from "@reduxjs/toolkit";
 const initialState = {
     x:0,
     y:0,
-    r:0
+    r:1
 }
 
 export const inputFormSlice = createSlice({

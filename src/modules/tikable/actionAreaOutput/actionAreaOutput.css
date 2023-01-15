@@ -1,6 +1,9 @@
 .action-area__output {
+    height: 420px;
     grid-area: graphic;
-    background: white;
     grid-column: 1 / 6;
     grid-row: 1 / 4;
+    text-align: center;
+    background: #6784DD;
+    border-radius: 10px;
 }
