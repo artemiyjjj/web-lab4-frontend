@@ -1,14 +1,14 @@
 import React from "react";
 import Button from "../../../../components/Button.jsx";
 
-const ActionButton = (props) => {
+const ActionButton = ({className, name, type, text, id}) => {
 
     return (
-        <label className={props.className} htmlFor={props.id}>
-            <Button type={props.type} id={props.id}
-                    className={props.className}
-                    onClick={props.onClick} name={props.name}
-                    value="submit" text={props.text} />
+        <label className={className} htmlFor={id}>
+            <Button type={type} id={id}
+                    className={className}
+                    name={name}
+                    value="submit" text={text} />
         </label>
     )
 }

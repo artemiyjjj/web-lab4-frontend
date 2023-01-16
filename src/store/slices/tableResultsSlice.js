@@ -6,7 +6,8 @@ const initialState = {shots: []}
 export const tableResultsSlice = createSlice({
     name: "tableResultsSlice",
     initialState,
-    reducers: {},
+    reducers: {
+    },
     extraReducers: (builder) => {
         builder.addMatcher(
             controllerServletApi.endpoints.makeShot.matchFulfilled,

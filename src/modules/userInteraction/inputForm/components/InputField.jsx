@@ -1,21 +1,21 @@
 import React from "react";
 import {useDispatch} from "react-redux";
 
-const InputField = (props) => {
+const InputField = ({className, name, label, placeholder, isRequired, setValue, min, max, type}) => {
 
     const dispatch = useDispatch();
 
     const handleChange = (event) => {
-        dispatch(props.setValue(event.target.value))
+        dispatch(setValue(event.target.value))
     }
 
     return (
-        <label className={props.className} htmlFor={props.name}>
-            {props.label}
-            <input id={props.name} name={props.name + "_field"}
-                   className={props.className + "_field"}
-                   placeholder={props.placeholder} required={props.isRequired}
-                   onChange={handleChange} type="text" />
+        <label className={className} htmlFor={name}>
+            {label}
+            <input id={name} name={name + "_field"} type={type}
+                   className={className + "_field"} min={min} max={max}
+                   placeholder={placeholder} required={isRequired}
+                   onChange={handleChange}  />
         </label>
     )
 }

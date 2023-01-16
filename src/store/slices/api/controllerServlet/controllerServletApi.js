@@ -8,21 +8,16 @@ export const controllerServletApi = createApi({
     baseQuery,
     tagTypes: tagTypes,
     endpoints: (builder) => ({
-        // getTableData: builder.query({
-        //     query: () => "",
-        //     providesTags: (result) => result
-        //         ? [
-        //             ...result.map(({id}) => ({type: "Table", id: "LIST"})),
-        //             {type: "Table", id: "LIST"},
-        //         ] :
-        //         [{type: "Table", id: "LIST"}],
-        // }),
+        getTableData: builder.query({
+            query: () => "",
+            providesTags: ["Table"]
+        }),
         makeShot: builder.mutation({
             query: ({x, y, r}) => ({
                 url: "",
                 method: "POST",
                 body: {x, y, r},
-                // invalidatesTags: {type: "Table", id: "LIST"}
+                invalidatesTags: ["Table"]
             })
         })
     })

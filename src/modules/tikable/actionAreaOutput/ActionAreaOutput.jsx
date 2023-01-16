@@ -1,5 +1,4 @@
-import React, {useRef} from "react";
-import {useSelector} from "react-redux";
+import React from "react";
 import Axis from "./axis/Axis.jsx";
 
 const ActionAreaOutput = () => {
@@ -7,7 +6,6 @@ const ActionAreaOutput = () => {
     return (
         <div className="action-area__output">
             <Axis />
-            {/*<AxisNew scaling={r}/>*/}
         </div>
     )
 }

@@ -1,2 +1,13 @@
 @import "./components/clock/clock.css";
 
+.home-container {
+    display: flex;
+    background: #6784dd;
+    align-items: center;
+
+    flex-direction: column;
+}
+
+.home-container__link {
+
+}

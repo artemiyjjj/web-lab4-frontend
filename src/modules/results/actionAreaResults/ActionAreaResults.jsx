@@ -4,12 +4,13 @@ import {useSelector} from "react-redux";
 const ActionAreaResults = () => {
 
     const {shots} = useSelector(state => state.tableResultsSlice);
-    console.log("shots: ", shots);
+
     // const {tableData = [], isLoading} = useGetTableDataQuery();
     // if (isLoading) {
     //     return <h2>Loading...</h2>
     // }
     // console.log(tableData);
+
     return (
         <div className="action-area__results">
             <table className="action-area__results__history-table">
@@ -25,7 +26,7 @@ const ActionAreaResults = () => {
                 </thead>
                 <tbody id="tableDataRoot" className="action-area__results__history-table_body">
                 {
-                    shots.map((shot) => (
+                    Array.from(shots).map((shot) => (
                         <tr key={shot.id} className="action-area__results__history-table__table-element">
                             <td>{shot.coordinates.x}</td>
                             <td>{shot.coordinates.y}</td>
@@ -33,7 +34,7 @@ const ActionAreaResults = () => {
                             <td>{shot.hit.toString()}</td>
                             <td>{shot.executionTime}</td>
                             <td>{new Date(shot.currentTime).toLocaleString()}</td>
-                        </tr>))
+                        </tr>)).reverse()
                 }
                 </tbody>
             </table>

@@ -5,6 +5,16 @@ import {useMakeShotMutation} from "../../../../store/slices/api/controllerServle
 import d3Consts from "./const/consts.js";
 import {handleClick} from "./utils/clickHandling.js";
 
+const width = d3Consts.width;
+const height = d3Consts.height;
+const offset = d3Consts.offset;
+const svgWidth = d3Consts.widthWithOffset;
+const svgHeight = d3Consts.heightWithOffset;
+const centerWidth = offset + width / 2,
+    centerHeight = offset + height / 2;
+const data = d3Consts.data;
+const tickValues = d3Consts.tickValues;
+
 const Axis = () => {
     const [makeShot] = useMakeShotMutation();
 
@@ -15,18 +25,6 @@ const Axis = () => {
             updateAxis()
         }, [d3Axis, r]
     )
-
-    const width = d3Consts.width;
-    const height = d3Consts.height;
-    const offset = d3Consts.offset;
-    const svgWidth = d3Consts.widthWithOffset;
-    const svgHeight = d3Consts.heightWithOffset;
-    const centerWidth = offset + width / 2,
-        centerHeight = offset + height / 2;
-    const data = d3Consts.data;
-    const tickValues = d3Consts.tickValues;
-
-
 
     function updateAxis() {
         if (d3Axis) {

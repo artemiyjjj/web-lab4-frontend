@@ -4,30 +4,30 @@ import Button from "../../../../components/Button.jsx";
 
 let classNames = require('classnames');
 
-const InputButtons = (props) => {
+const InputButtons = ({options, className, name, selectedClassName, selectedValue, setValue, label}) => {
 
     const dispatch = useDispatch();
 
     const handleChange = (event) => {
-        dispatch(props.setValue(event.target.value))
+        dispatch(setValue(event.target.value))
     }
 
-    const listItems = props.options.map((value) => {
-            const className = classNames(props.className + "_button", {
-                    [props.selectedClassName + "-button"]: props.selectedValue == value
+    const listItems = options.map((value) => {
+            const finalClassName = classNames(className + "_button", {
+                    [selectedClassName + "-button"]: selectedValue == value
                 }
             );
-            // props.className + value === props.selectedValue ? " " + props.selectedClassName + "-button" : "";
-            return <Button className={className}
+
+            return <Button className={finalClassName}
                            type="button" key={value.toString()} value={value}
-                           name={props.name} id={props.name + value.toString()}
+                           name={name} id={name + value.toString()}
                            text={value} onClick={handleChange}/>
         }
     );
 
     return (
-        <label className={props.className}>
-            {props.label}
+        <label className={className}>
+            {label}
             {listItems}
         </label>
     )

@@ -1,26 +1,26 @@
 import React from "react";
 import {useDispatch} from "react-redux";
 
-const InputSelector = (props) => {
+const InputSelector = ({setValue, options, className, name, label, header, isRequired}) => {
 
     const dispatch = useDispatch();
 
     const handleChange = (event) => {
-        dispatch(props.setValue(event.target.value))
+        dispatch(setValue(event.target.value))
     }
 
-    const listItems = props.options.map((option) =>
+    const listItems = options.map((option) =>
         <option value={option} key={option.toString()}>{option}</option>
     );
 
     return (
-        <label className={props.className} htmlFor={props.name}>
-            {props.label}
-            <select id={props.name} name={props.name + "_select"}
-                    className={props.className + "_select"}
-                    onChange={handleChange} required={props.isRequired}
-            defaultValue={props.header}>
-                <option disabled> {props.header} </option>
+        <label className={className} htmlFor={name}>
+            {label}
+            <select id={name} name={name + "_select"}
+                    className={className + "_select"}
+                    onChange={handleChange} required={isRequired}
+            defaultValue={header}>
+                <option disabled> {header} </option>
                 {listItems}
             </select>
         </label>
