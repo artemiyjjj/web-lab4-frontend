@@ -1,14 +1,11 @@
-import React from "react";
-import {Outlet, Route, Routes} from "react-router-dom";
+import Header from "src/layout/components/header/Header.jsx";
 
-import Header from "./components/header/Header.jsx";
-
-const CommonLayout = () => {
+const CommonLayout = ({children}) => {
 
     return (
         <>
             <Header/>
-            <Outlet/>
+            {children}
         </>
 
     )

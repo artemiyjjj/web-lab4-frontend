@@ -2,12 +2,15 @@
     background-color: #F6B062;
     width: 100%;
     display: grid;
-    grid-template-columns: minmax(60px, 80px) repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: minmax(60px, 80px) repeat(3, minmax(150px, 1fr)) minmax(60px, 80px);
     place-items: center;
     grid-area: header;
 }
 
-.headers {
+/*@media screen {*/
+
+/*}*/
+.header-part {
     text-align: center;
 }
 

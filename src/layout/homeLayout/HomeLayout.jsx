@@ -1,20 +1,23 @@
-import React from "react";
-import {NavLink} from "react-router-dom";
-import {paths} from "../navigation/routes.js";
-import {Clock} from "./components/clock/Clock.jsx";
+import Link from "next/link";
+import {useSelector} from "react-redux";
+
+import Clock from "./components/clock/Clock.jsx";
+import UserStats from "src/layout/homeLayout/components/userStats/UserStats.jsx";
+import {paths} from "src/utils/const/route.js";
 
 const HomeLayout = () => {
-
+    const userLogin = useSelector(state => state.userSlice.user.login);
 
     return (
         <>
             <div className="home-container">
-                <h1>Groove street. Home</h1>
+                <UserStats/>
                 <Clock/>
-                <NavLink to={paths.main} className="home-container__link">Go to the main page!</NavLink>
+                <Link href={userLogin + paths.mainINC} className="home-container__link">
+                    Go to the main page!</Link>
             </div>
         </>
-    )
+    );
 }
 
 export default HomeLayout;

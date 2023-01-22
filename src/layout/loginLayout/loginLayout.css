@@ -1,0 +1,33 @@
+.login-page {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.login-page__login-form {
+    padding: 1rem;
+    border: 1px solid #666666;
+    background: #69a3b2;
+    display: grid;
+    grid-column: 2/3;
+    grid-row: 2;
+    grid-gap: 10px;
+    border-radius: 10px;
+}
+
+.login-page__login-form__login,
+.login-page__login-form__password {
+    display: flex;
+    flex-flow: column;
+}
+
+.login-page__login-form__login_field,
+.login-page__login-form__password_field {
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.login-page__login-form__login-button_button,
+.login-page__login-form__password_button_button {
+    justify-self: end;
+}
