@@ -3,6 +3,11 @@ import cursorLogo from "media/cursor-button.svg";
 import homeLogo from "media/home-button.svg";
 import signOutSvg from "media/sign-out-button.svg"
 
+export const storageConsts = {
+    jwt: "access",
+    user: "user"
+}
+
 export const paramsForLink = {
     loginParams: {
         path: paths.login,
@@ -32,6 +37,7 @@ export const paramsForLink = {
 
 export const classNames = {
     header: "header-wrapper",
+    headerMain: "header-main",
     headerPart: "header-part",
     homeButton: "navigation-button",
     signOutButton: "signOut-button",

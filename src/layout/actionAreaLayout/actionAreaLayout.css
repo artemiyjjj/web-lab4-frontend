@@ -5,5 +5,13 @@
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: repeat(5, 1fr);
     gap: 10px 10px;
+
+}
+
+@media (max-width: 725px) {
+    .action-area {
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: repeat(8, 20vh);
+    }
 }
 

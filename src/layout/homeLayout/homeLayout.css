@@ -4,10 +4,37 @@
     display: flex;
     background: #6784dd;
     align-items: center;
-
     flex-direction: column;
+    border-radius: 10px;
+}
+
+.home-page__user-data__table {
+    width: 90%;
+    border: 2px white solid;
+    border-radius: 5px;
+    text-align: center;
+    padding: 5px;
+}
+
+.home-page__user-data__table__head {
+    background: #303E68;
+}
+
+.home-page__user-data__table__head__header,
+.home-page__user-data__table__body__cell {
+    padding: 10px;
+    border: 1px white solid;
+}
+
+.home-page__user-data__table__head__header {
+    color: #F6B062;
 }
 
 .home-container__link {
+    color: #F6B062;
+    font-size: 30px;
+}
 
+.home-container__link:hover {
+    color: #303E68;
 }

@@ -1,4 +1,5 @@
-import {createApi} from "@reduxjs/toolkit/dist/query/react/index.js";
+
+import {createApi} from "@reduxjs/toolkit/query/react";
 import {baseQuery} from "../configureApi.js";
 
 const tagTypes = ["Table"]
@@ -9,12 +10,12 @@ export const controllerServletApi = createApi({
     tagTypes: tagTypes,
     endpoints: (builder) => ({
         // getTableData: builder.query({
-        //     query: () => "",
+        //     query: () => "hits/",
         //     providesTags: ["Table"]
         // }),
         makeShot: builder.mutation({
             query: ({x, y, r}) => ({
-                url: "",
+                url: "hits/",
                 method: "POST",
                 body: {x, y, r},
                 // invalidatesTags: ["Table"]

@@ -1,11 +1,11 @@
 import {useDispatch, useSelector} from "react-redux";
+import {useMakeShotMutation} from "src/store/slices/api/controllerServlet/controllerServletApi.js";
 import {inputField, inputButtons, inputSelector, actionButton} from "./consts/formConsts.js";
 import InputField from "src/components/InputField.jsx";
 import InputSelector from "src/components/InputSelector.jsx";
 import InputButtons from "src/components/InputButtons.jsx";
 import ActionButton from "src/components/ActionButton.jsx";
 import {inputFormActions} from "src/store/slices/inputFormSlice.js";
-import {useMakeShotMutation} from "src/store/slices/api/controllerServlet/controllerServletApi.js";
 
 const InputForm = () => {
     const dispatch = useDispatch();

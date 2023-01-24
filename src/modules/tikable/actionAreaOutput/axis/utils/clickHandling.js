@@ -6,12 +6,13 @@ export function handleClick({event, r, width, height, offset, numX, numY}) {
 }
 
 function calcSvgCoordinates(event) {
-    const {farthestViewportElement: svgRoot} = event.target;
+    const svgRoot = event.target;
     const coordinates = svgRoot.getBoundingClientRect();
 
     const svgX = Math.round(event.clientX - coordinates.left);
     const svgY = Math.round(event.clientY - coordinates.top);
 
+    console.log("coords",svgX, svgY);
     return {svgX, svgY};
 }
 

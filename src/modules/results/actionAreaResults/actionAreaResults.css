@@ -1,11 +1,14 @@
 .action-area__results {
     background: #95a7d0;
     grid-area: results;
-    width: 100%;
-    height: 700px;
+    height: auto;
     overflow: hidden auto;
     grid-column: 6 / 9;
     grid-row: 1 / 6;
+}
+tr.action-area__results__history-table__table-header:hover,
+tr.action-area__results__history-table__table-element:hover {
+    background-color: #F6B062;
 }
 
 .action-area__results__history-table {
@@ -24,4 +27,10 @@
     padding: 10px 5px 10px 5px;
     word-break: keep-all;
     background: #6784DD;
+}
+
+@media (max-width: 725px) {
+    .action-area__results {
+        grid-area: 6/1/9/9;
+    }
 }

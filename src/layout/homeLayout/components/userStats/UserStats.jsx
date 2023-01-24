@@ -15,9 +15,9 @@ const userStats = () => {
             </thead>
             <tbody className={classNames.tableBody}>
                 <tr>
-                    <td className={classNames.tableCell}>{userData.data.name}</td>
+                    <td className={classNames.tableCell}>{userData.data.firstName}</td>
                     <td className={classNames.tableCell}>{userData.data.shotsMade}</td>
-                    <td className={classNames.tableCell}>{userData.data.registrationTime}</td>
+                    <td className={classNames.tableCell}>{new Date(userData.data.registrationTime).toLocaleString()}</td>
                 </tr>
             </tbody>
         </table>

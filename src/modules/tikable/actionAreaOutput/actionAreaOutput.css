@@ -1,9 +1,17 @@
 .action-area__output {
-    height: 420px;
+    height: auto;
     grid-area: graphic;
     grid-column: 1 / 6;
     grid-row: 1 / 4;
     text-align: center;
     background: #6784DD;
     border-radius: 10px;
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 725px) {
+    .action-area__output {
+        grid-area: 1/1/4/9;
+    }
 }

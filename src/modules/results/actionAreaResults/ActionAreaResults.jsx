@@ -28,12 +28,12 @@ const ActionAreaResults = () => {
                 {
                     Array.from(shots).map((shot) => (
                         <tr key={shot.id} className="action-area__results__history-table__table-element">
-                            <td>{shot.coordinates.x}</td>
-                            <td>{shot.coordinates.y}</td>
-                            <td>{shot.coordinates.r}</td>
+                            <td>{shot.x}</td>
+                            <td>{shot.y}</td>
+                            <td>{shot.r}</td>
                             <td>{shot.hit.toString()}</td>
-                            <td>{shot.executionTime}</td>
-                            <td>{new Date(shot.currentTime).toLocaleString()}</td>
+                            <td>{shot?.executionTime}</td>
+                            {/*<td>{new Date(shot?.currentTime).toLocaleString()}</td>*/}
                         </tr>)).reverse()
                 }
                 </tbody>

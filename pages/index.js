@@ -9,8 +9,8 @@ const StartingPage = () => {
 
     useEffect(()=>{
         if (user.authorized)
-            router.push(user.login + paths.homeINC);
-        else router.push(paths.login);
+            router.push(`/${user.login}${paths.homeINC}`);
+        else router.push(paths.signUp);
     },[user])
     return null;
 }

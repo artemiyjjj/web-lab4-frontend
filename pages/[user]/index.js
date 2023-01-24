@@ -5,11 +5,15 @@ import {paths} from "src/utils/const/route.js";
 
 const StartingPage = () => {
     const router = useRouter();
-    const userLogin = useSelector(state => state.userSlice.user.login);
+    const user = useSelector(state => state.userSlice.user);
 
-    useEffect(()=>{
-        router.push(userLogin + paths.homeINC);
-    },[])
+    useEffect(() => {
+        if (!user.isAuthorized) {
+            router.push(paths.default);
+        } else {
+            router.push(`/${user.login}${paths.homeINC}`);
+        }
+    }, [user])
     return null;
 }
 export default StartingPage;

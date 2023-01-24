@@ -5,8 +5,8 @@ const initialState = {
         login: "guest",
         isAuthorized: false,
         data: {
-            name: "John Doe",
-            registrationTime: 0,
+            firstName: "John Doe",
+            registrationTime: new Date().getTime(),
             shotsMade: 0,
         }
     }
@@ -22,6 +22,9 @@ export const userSlice = createSlice({
         setShotsMade: (state, action) => {
             state.user.data.shotsMade = action.payload
         },
+        setInitialUserState: (state) => {
+            state.user = initialState.user;
+        }
     }
 });
 
